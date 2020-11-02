@@ -264,14 +264,55 @@ console.log("EX15 is the same as EX2");
 16)
 Create a function to check from two given integers, whether one is positive and another one is negative.
 */
+console.log("---------EX16---------");
+
+const ex16 = function (x, y) {
+  if ((x >= 0 && y < 0) || (y >= 0 && x < 0)) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+console.log(ex16(8, -6));
+
 /*
 17)
 Create a function to create new string with first 3 characters are in lower case and the others in upper case. If the string length is less than 3 convert all the characters in upper case. 
 */
+console.log("---------EX17---------");
+
+const ex17 = function (str) {
+  if (str.length < 3) {
+    let short = str.toUpperCase();
+    return short;
+  } else {
+    let first3 = str.substring(0, 3).toLowerCase();
+    let remainder = str.substring(3).toUpperCase();
+    return first3.concat(remainder);
+  }
+};
+
+console.log(ex17("i have the power of god and anime on my side"));
+console.log(ex17("ah"));
+
 /*
 18)
 Create a function to calculate the sum of the two given integers, If the sum is in the range 50..80 return 65 other wise return 80.
 */
+console.log("---------EX18---------");
+
+const ex18 = function (x, y) {
+  let sum = x + y;
+  if (sum >= 50 && sum <= 80) {
+    return 65;
+  } else {
+    return 80;
+  }
+};
+
+console.log(ex18(45, 55));
+
 /*
 19)
 Create a function to convert a number to a string, the contents of which depend on the number's factors. Follow next example:
@@ -287,7 +328,62 @@ this would be a "DiegoRiccardo".
 34 has four factors: 1, 2, 17, and 34.
 this would be "34".
 */
+console.log("---------EX19---------");
+
+const ex19 = function (x) {
+  const factors = [];
+  for (let i = 1; i <= x; i++) {
+    if (x % i == 0) {
+      factors.push(i);
+    }
+  }
+  let output = [x];
+  if (factors.includes(3)) {
+    if (output.includes(x)) {
+      let removeX = output.indexOf(x);
+      output.splice(removeX, 1);
+    }
+    let removeX = output.indexOf(x);
+    output.splice(removeX, 1);
+    output.push("Diego");
+  }
+  if (factors.includes(5)) {
+    if (output.includes(x)) {
+      let removeX = output.indexOf(x);
+      output.splice(removeX, 1);
+    }
+    output.push("Riccardo");
+  }
+  if (factors.includes(7)) {
+    if (output.includes(x)) {
+      let removeX = output.indexOf(x);
+      output.splice(removeX, 1);
+    }
+    output.push("Stefano");
+  }
+  return output.join("");
+};
+
+console.log(ex19(28));
+console.log(ex19(30));
+console.log(ex19(34));
+
 /*
 20)
 Create a function that given a phrase returns its acronym, like British Broadcasting Corporation returns BBC
 */
+console.log("---------EX20---------");
+
+const ex20 = function (str) {
+  let ex20Array = str.split(" ");
+  let acronym = [];
+  for (let i = 0; i < ex20Array.length; i++) {
+    let firstChar = ex20Array[i].substring(0, 1);
+    if (firstChar == firstChar.toUpperCase()) {
+      acronym.push(firstChar);
+    }
+  }
+  return acronym.join("");
+};
+
+console.log(ex20("The Minsitry of Silly Walks"));
