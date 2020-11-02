@@ -387,3 +387,34 @@ const ex20 = function (str) {
 };
 
 console.log(ex20("The Minsitry of Silly Walks"));
+
+console.log("----------------------------ADVANCED----------------------------");
+
+console.log("---------ADVANCED EX1---------");
+
+const advEx1 = function (str) {
+  let advEx1Arr = str.split("");
+  let memory = [];
+  for (let i = 0; i < advEx1Arr.length; i++) {
+    if (memory.includes(advEx1Arr[i])) {
+      console.log(i);
+      memory.i.push(1);
+    } else {
+      console.log(advEx1Arr[i]);
+      let i = [advEx1Arr[i]];
+      memory.push(i);
+    }
+  }
+  console.log(memory);
+  let mostCommon = 0;
+  let current = memory[0].length;
+  for (let j = 0; j < memory.length; j++) {
+    if (memory[j].length > current) {
+      mostCommon = memory[j];
+      current = memory[j];
+    }
+  }
+  return mostCommon;
+};
+
+console.log(advEx1("Thicck"));
