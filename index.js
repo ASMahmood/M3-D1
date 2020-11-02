@@ -2,27 +2,91 @@
 1)
 Create a function to calculate the sum of the two given integers. If the two values are same, then returns triple their sum.
 */
+console.log("---------EX1---------");
+
+const sumOfTwoInts = function (x, y) {
+  const sum = x + y;
+  if (x === y) {
+    return 3 * sum;
+  } else {
+    return sum;
+  }
+};
+
+console.log(sumOfTwoInts(5, 5));
 
 /*
 2)
 Create a function to check two given numbers and return true if one of the number is 50 or if their sum is 50.
 */
+console.log("---------EX2---------");
+
+const ex2 = function (x, y) {
+  let sum = x + y;
+  if (sum === 50 || x === 50 || y === 50) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+console.log(ex2(5, 30));
 
 /*
 3)
 Create a function to remove a character at the specified position of a given string and return the new string.
 */
+console.log("---------EX3---------");
+
+const ex3 = function (x) {
+  let ex3String = "Hey there, my name is Abdul";
+  let ex3Array = ex3String.split("");
+  ex3Array.splice(x - 1, 1);
+  return ex3Array.join("");
+};
+
+console.log(ex3(2));
 
 /*
 4)
  Create a function to find the largest of three given integers.
 */
+console.log("---------EX4---------");
+
+const ex4 = function (x, y, z) {
+  if (x > y && x > z) {
+    return x;
+  } else if (y > x && y > z) {
+    return y;
+  } else if (z > y && z > x) {
+    return z;
+  } else {
+    console.log("Some of these values might be the same");
+  }
+};
+
+console.log(ex4(8, 7, 13));
 
 /*
 5)
 Create a function to check whether two numbers are in range 40..60 or in the range 70..100 inclusive.
 */
+console.log("---------EX5---------");
 
+const ex5 = function (x, y) {
+  if (
+    (60 >= x && x >= 40 && 60 >= y && y >= 40) ||
+    (100 >= x && x >= 70 && 100 >= y && y >= 70)
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+console.log(ex5(95, 77));
+
+// || 100 >= (x && y) >= 70
 /*
 6) 
 Create a function to create a new string of specified copies (positive number) of a given string.
