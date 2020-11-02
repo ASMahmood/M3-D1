@@ -169,6 +169,22 @@ console.log(ex10([2, 3]));
 11)
 Create a function to find the longest string from a given array of strings.
 */
+console.log("---------EX11---------");
+
+const ex11 = function (arr) {
+  let longest = 0;
+  let current = arr[0].length;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length > current) {
+      longest = arr[i];
+      current = arr[i];
+    }
+  }
+  return longest;
+};
+
+console.log(ex11(["general", "-ask-strive-school", "-questions", "-random"]));
+
 /*
 12)
 Create a function to find the types of a given angle.
@@ -178,18 +194,72 @@ Types of angles:
     btuse angle: An angle between 90 and 180 degrees.
     Straight angle: A 180 degree angle.
 */
+console.log("---------EX12---------");
+
+const ex12 = function (x) {
+  if (x === 90) {
+    return "Right angle";
+  } else if (x === 180) {
+    return "Straight angle";
+  } else if (x >= 0 && x < 90) {
+    return "Acute angle";
+  } else if (x > 90 && x < 180) {
+    return "Obtuse angle";
+  } else {
+    return "This angle is greater than 180 degrees";
+  }
+};
+
+console.log(ex12(70));
+
 /*
 13)
 Create a function to find the index of the greatest element of a given array of integers
 */
+console.log("---------EX13---------");
+
+const ex13 = function (arr) {
+  let greatest = 0;
+  let current = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > current) {
+      greatest = arr[i];
+      current = arr[i];
+    }
+  }
+  return arr.indexOf(greatest);
+};
+
+console.log(ex13([3, 5, 7, 1, 12, 8]));
+
 /*
 14)
 Create a function to get the largest even number from an array of integers.
 */
+console.log("---------EX14---------");
+
+const ex14 = function (arr) {
+  let greatest = 0;
+  let current = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > current && Number.isInteger(arr[i] / 2)) {
+      greatest = arr[i];
+      current = arr[i];
+    }
+  }
+  return greatest;
+};
+
+console.log(ex14([3, 35, 7, 32, 1, 12, 8]));
+
 /*
 15)
 Create a function to check two given numbers and return true if one of the number is 50 or if their sum is 50.
 */
+console.log("---------EX15---------");
+
+console.log("EX15 is the same as EX2");
+
 /*
 16)
 Create a function to check from two given integers, whether one is positive and another one is negative.
